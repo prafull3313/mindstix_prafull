@@ -1,0 +1,35 @@
+<!-- accepting data from user & putting it in JSON object -->
+<!Doctype html>
+<html>
+	<body>
+		<input type="text" id="myName" placeholder="Enter Your Name"/><br/>
+		<input type="text" id="myLastname" placeholder="Enter Your Lastname"/><br/>
+		<button type="button" onclick="myFun()">Add</button><br/><br/>
+		<p id="myPara"></p>
+
+		<script>
+			function myFun()
+			{
+				var name = document.getElementById("myName").value;
+				var lastname = document.getElementById("myLastname").value;
+
+				// var myEmployees = '{"employees" : [{"Name":"ABC", "Lastname":"XYZ"}]}';
+				// var myObj = JSON.parse(myEmployees);
+				// document.getElementById("myPara").innerHTML = myObj.employees[0].Name + " " + myObj.employees[0].Lastname;
+
+
+				//document.getElementById("myPara").innerHTML = name + " " + lastname;
+
+				var myNewObj = {"students" : [{"Name":"", "LastName":""}]};
+				myNewArr = [];
+				myNewObj.students[0]["Name"] = name;
+				myNewObj.students[0]["Lastname"] = lastname;
+				myNewArr.push(myNewObj);				
+				document.getElementById("myPara").innerHTML = myNewObj.students[0].Name + " " + myNewObj.students[0].Lastname;
+
+				
+			}
+		</script>
+
+	</body>
+</html>
