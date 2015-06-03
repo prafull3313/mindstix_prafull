@@ -1,0 +1,36 @@
+<!-- this tut contains how we can get back string from JSON object & how can we print all the elements of the JSON object -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Vehicles :</h2>
+
+<!-- <p id="demo"></p>
+<div id="veh"></div> -->
+<script>
+// var myStudents = '{"student":[' +
+// '{"Name":"ABC","RollNumber":"1","Marks":"70" },' +
+// '{"Name":"XYZ","RollNumber":"2","Marks":"80" },' +
+// '{"Name":"PQR","RollNumber":"3","Marks":"60" }]}';
+
+// myObj = JSON.parse(myStudents);
+
+// document.getElementById("demo").innerHTML = 
+// myObj.student[0].Name + " " + myObj.student[0].RollNumber + " " + myObj.student[0].Marks; 
+
+// var myString = JSON.stringify(myObj);
+// alert(myString);
+
+var myVehicles = {"vehicles" : [{"Company":"Hero", "Name":"Splendour"},{"Company":"Honda", "Name":"Unicorn"}]};
+var i = 0;
+for(i=0;i<myVehicles.vehicles.length;i++)
+{   
+   document.writeln("<b>Company : </b>" + myVehicles.vehicles[i].Company + "&nbsp;&nbsp;&nbsp;");
+   document.writeln("<b>Name : </b>" + myVehicles.vehicles[i].Name);
+   document.writeln("<hr/>");
+}
+</script>
+
+</body>
+</html>
