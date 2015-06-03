@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Students</h2>
+
+<p id="demo"></p>
+
+<h2>Teachers</h2>
+
+<div id="demo1"></div>
+
+<script>
+var myStudents = '{"student":[' +
+'{"Name":"ABC","RollNumber":"1","Marks":"70" },' +
+'{"Name":"XYZ","RollNumber":"2","Marks":"80" },' +
+'{"Name":"PQR","RollNumber":"3","Marks":"60" }]}';
+
+myObj = JSON.parse(myStudents);
+
+document.getElementById("demo").innerHTML = 
+myObj.student[0].Name + " " + myObj.student[0].RollNumber + " " + myObj.student[0].Marks; 
+
+var myTeachers = '{"teachers" : [' +
+'{"Name":"teacher1", "Subject":"sub1"},'+
+'{"Name":"teacher2", "Subject":"sub2"}]}';
+myTeachObj = JSON.parse(myTeachers);
+document.getElementById("demo1").innerHTML =
+myTeachObj.teachers[0].Name + " " + myTeachObj.teachers[0].Subject;
+alert(myTeachers);
+alert(myTeachObj);
+
+string myStr = myObj.getString("");
+alert(myStr);
+</script>
+
+</body>
+</html>
